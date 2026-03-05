@@ -7,11 +7,11 @@ from tokenizers.normalizers import NFKC
 CORPUS_PATH = "data/corpus.txt"
 OUT_JSON = "tokenizer/relationship_bpe.json"
 
-# Make output folder
+
 import os
 os.makedirs("tokenizer", exist_ok=True)
 
-# GPT-style tokenization: ByteLevel BPE
+# ByteLevel BPE
 tokenizer = Tokenizer(BPE(unk_token="<unk>"))
 tokenizer.normalizer = NFKC()
 tokenizer.pre_tokenizer = ByteLevel(add_prefix_space=True)

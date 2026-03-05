@@ -3,7 +3,7 @@ import numpy as np
 
 TOKENS_PATH = "data/tokens/all_tokens.npy"
 OUT_DIR = "data/tokens"
-SEQ_LEN = 256          # good starter
+SEQ_LEN = 256          
 VAL_FRACTION = 0.02    # 2% validation
 
 tokens = np.load(TOKENS_PATH)
